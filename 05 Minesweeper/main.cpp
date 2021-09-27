@@ -1,3 +1,5 @@
+#Horrible minesweeper rip-off
+
 #include <SFML/Graphics.hpp>
 #include <time.h>
 using namespace sf;
@@ -27,17 +29,17 @@ int main()
     for (int i=1;i<=10;i++)
      for (int j=1;j<=10;j++)
       {
-        int n=0;
-        if (grid[i][j]==9) continue;
-        if (grid[i+1][j]==9) n++;
-        if (grid[i][j+1]==9) n++;
-        if (grid[i-1][j]==9) n++;
-        if (grid[i][j-1]==9) n++;
-        if (grid[i+1][j+1]==9) n++;
-        if (grid[i-1][j-1]==9) n++;
-        if (grid[i-1][j+1]==9) n++;
-        if (grid[i+1][j-1]==9) n++;
-        grid[i][j]=n;
+		int n=0;
+		if (grid[i][j]==9) continue;
+		if (grid[i+1][j]==9) n++;
+		if (grid[i][j+1]==9) n++;
+		if (grid[i-1][j]==9) n++;
+		if (grid[i][j-1]==9) n++;
+		if (grid[i+1][j+1]==9) n++;
+		if (grid[i-1][j-1]==9) n++;
+		if (grid[i-1][j+1]==9) n++;
+		if (grid[i+1][j-1]==9) n++;
+		grid[i][j]=n;
       }
 
     while (app.isOpen())
