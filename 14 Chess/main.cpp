@@ -1,4 +1,4 @@
-#Chess (I didnt write this)
+//Chess (I didnt write this)
 
 #include <SFML/Graphics.hpp>
 #include <time.h>
@@ -73,13 +73,10 @@ void loadPosition()
       move(position.substr(i,4));
 }
 
-
 int main()
 {
     RenderWindow window(VideoMode(504, 504), "The Chess! (press SPACE)");
-
     ConnectToEngine("stockfish.exe");    
-
     Texture t1,t2;
     t1.loadFromFile("images/figures.png"); 
     t2.loadFromFile("images/board.png");
@@ -173,6 +170,5 @@ int main()
     }
 
     CloseConnection();
-
     return 0;
 }
