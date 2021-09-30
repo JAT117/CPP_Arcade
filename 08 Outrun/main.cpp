@@ -1,4 +1,4 @@
-#Terrible Outrun offshoot
+//Terrible Outrun offshoot
 #include <SFML/Graphics.hpp>
 using namespace sf;
 
