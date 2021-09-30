@@ -1,4 +1,5 @@
-#Astroids (killed the dinos)
+//Astroids (killed the dinos)
+
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include <list>
@@ -31,7 +32,6 @@ class Animation
      sprite.setTextureRect(frames[0]);
    }
 
-
    void update()
    {
      Frame += speed;
@@ -44,9 +44,7 @@ class Animation
    {
      return Frame+speed>=frames.size();
    }
-
 };
-
 
 class Entity
 {
@@ -87,7 +85,6 @@ class Entity
    virtual ~Entity(){};
 };
 
-
 class asteroid: public Entity
 {
    public:
@@ -106,9 +103,7 @@ class asteroid: public Entity
      if (x>W) x=0;  if (x<0) x=W;
      if (y>H) y=0;  if (y<0) y=H;
    }
-
 };
-
 
 class bullet: public Entity
 {
@@ -128,9 +123,7 @@ class bullet: public Entity
 
      if (x>W || x<0 || y>H || y<0) life=0;
    }
-
 };
-
 
 class player: public Entity
 {
@@ -163,9 +156,7 @@ class player: public Entity
     if (x>W) x=0; if (x<0) x=W;
     if (y>H) y=0; if (y<0) y=H;
    }
-
 };
-
 
 bool isCollide(Entity *a,Entity *b)
 {
@@ -173,7 +164,6 @@ bool isCollide(Entity *a,Entity *b)
          (b->y - a->y)*(b->y - a->y)<
          (a->R + b->R)*(a->R + b->R);
 }
-
 
 int main()
 {
@@ -314,6 +304,5 @@ int main()
    for(auto i:entities) i->draw(app);
    app.display();
     }
-
     return 0;
 }
