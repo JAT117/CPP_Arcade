@@ -1,4 +1,4 @@
-#Crappy tetris clone
+//Crappy tetris clone
 
 #include <SFML/Graphics.hpp>
 #include <time.h>
@@ -31,7 +31,6 @@ bool check()
       else if (field[a[i].y][a[i].x]) return 0;
    return 1;
 };
-
 
 int main()
 {
@@ -139,12 +138,12 @@ int main()
     for (int i=0;i<M;i++)
      for (int j=0;j<N;j++)
        {
-			if (field[i][j]==0) 
-				continue;
-			s.setTextureRect(IntRect(field[i][j]*18,0,18,18));
-			s.setPosition(j*18,i*18);
-			s.move(28,31); //offset
-			window.draw(s);
+	if (field[i][j]==0) 
+		continue;
+	s.setTextureRect(IntRect(field[i][j]*18,0,18,18));
+	s.setPosition(j*18,i*18);
+	s.move(28,31); //offset
+	window.draw(s);
        }
 
     for (int i=0;i<4;i++)
@@ -158,6 +157,5 @@ int main()
     window.draw(frame);
     window.display();
     }
-
     return 0;
 }
